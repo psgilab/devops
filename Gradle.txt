@@ -1,0 +1,36 @@
+1. Download Gradle 8.6 from browser
+2. cd Gradle:
+	export PATH=$PATH:/home/cloudlab**/gradle/gradle-8.6
+exit
+3. mkdir gradleexp
+4. cd gradleexp/
+5. gradle init
+--> give all
+then go to app.java
+
+import java.util.*;
+public class NonRepeatedElement {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 1, 2, 3, 6);
+        Set<Integer> uniqueElements = new HashSet<>();
+        Set<Integer> repeatedElements = new HashSet<>();
+
+        for (Integer number : numbers) {
+            if (!repeatedElements.contains(number)) {
+                if (uniqueElements.contains(number)) {
+                    uniqueElements.remove(number);
+                    repeatedElements.add(number);
+                } else {
+                    uniqueElements.add(number);
+                }
+            }
+        }
+
+        System.out.println("Non-repeated elements in the list:");
+        for (Integer uniqueElement : uniqueElements) {
+            System.out.print(uniqueElement + " ");
+        }
+    }
+}
+
+6. gradle run

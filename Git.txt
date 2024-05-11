@@ -1,0 +1,12 @@
+git config --global user.name "srinivas654"
+git config --global user.email "21z148@psgitech.ac.in"
+git config --list
+mkdir devopslab
+cd 
+git clone
+git status
+git add hello.py
+git status
+git commit -m "First Commit"
+git remote set-url origin https://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@github.com/Srinivasa-pradeep-s/devops.git
+git push origin main
